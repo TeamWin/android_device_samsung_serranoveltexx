@@ -23,8 +23,9 @@ BOARD_RAMDISK_OFFSET         := 0x02000000
 BOARD_KERNEL_TAGS_OFFSET     := 0x01e00000
 
 TARGET_KERNEL_SOURCE         := kernel/samsung/serranoveltexx
-TARGET_KERNEL_CONFIG         := msm8916_sec_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_serranovelte_eur_defconfig
+#TARGET_KERNEL_CONFIG         := msm8916_sec_defconfig
+#TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_serranovelte_eur_defconfig
+TARGET_KERNEL_CONFIG         := cyanogen_serranoveltexx_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 
 TARGET_BOOTLOADER_BOARD_NAME := msm8916
