@@ -4,10 +4,16 @@
            fetch="https://github.com/CyanogenMod"
            review="review.cyanogenmod.org" />
 
+  <remote  name="lambdadroid"
+           fetch="https://github.com/lambdadroid" />
+
   <remove-project name="android_bionic" />
 
   <project path="bionic" name="android_bionic" remote="cm" revision="cm-12.1" />
   <project path="device/qcom/common" name="android_device_qcom_common" remote="cm" revision="cm-12.1" />
   <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="cm" revision="cm-12.1" />
   <project path="hardware/samsung" name="android_hardware_samsung" remote="cm" revision="cm-12.1" />
+
+  <project path="device/samsung/serranoveltexx" name="android_device_samsung_serranoveltexx" remote="lambdadroid" revision="cm-12.1" />
+  <project path="kernel/samsung/serranoveltexx" name="android_kernel_samsung_serranoveltexx" remote="lambdadroid" revision="cm-12.1" />
 </manifest>
