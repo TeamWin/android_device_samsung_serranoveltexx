@@ -77,7 +77,7 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/serranoveltexx/rootdir/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 
 # TWRP
 TW_THEME := portrait_mdpi
@@ -87,7 +87,16 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_CRYPTO := true
-TW_TARGET_USES_QCOM_BSP := true
 
+# Brightness
+# /sys/class/leds/lcd-backlight/brightness is a symlink to
+# /sys/devices/soc.0/1a00000.qcom,mdss_mdp/qcom,mdss_fb_primary.137/leds/lcd-backlight/brightness
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+
+# TODO: Is this really, really needed for serranoveltexx?
+BOARD_SUPPRESS_SECURE_ERASE := true
+
+TW_TARGET_USES_QCOM_BSP := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_QCOM_DISPLAY_VARIANT := caf
