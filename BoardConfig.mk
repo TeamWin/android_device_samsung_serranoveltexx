@@ -80,7 +80,7 @@ TARGET_RECOVERY_FSTAB := device/samsung/serranoveltexx/rootdir/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 
 # TWRP
-DEVICE_RESOLUTION := 540x960
+TW_THEME := portrait_mdpi
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
