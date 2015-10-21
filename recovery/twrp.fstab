@@ -1,0 +1,24 @@
+#<mnt_point>     <type>  <src>                                    <flags>
+/boot             emmc    /dev/block/bootdevice/by-name/boot
+/recovery         emmc    /dev/block/bootdevice/by-name/recovery
+
+/system           ext4    /dev/block/bootdevice/by-name/system
+/data             ext4    /dev/block/bootdevice/by-name/userdata   flags=length=-16384
+/cache            ext4    /dev/block/bootdevice/by-name/cache
+
+/preload          ext4    /dev/block/bootdevice/by-name/hidden     flags=display="Preload";wipeingui;backup=1
+
+/efs              ext4    /dev/block/bootdevice/by-name/efs        flags=display="EFS";backup=1
+# Not exactly sure what these contain, but I think it's somehow related to the EFS so let's backup them to be sure
+/efs1             emmc    /dev/block/bootdevice/by-name/modemst1   flags=backup=1;subpartitionof=/efs
+/efs2             emmc    /dev/block/bootdevice/by-name/modemst2   flags=backup=1;subpartitionof=/efs
+
+# Backup these partitions as guard for the self-destruction command `adb nvbackup`
+/fsg              emmc    /dev/block/bootdevice/by-name/fsg        flags=display="FSG";backup=1
+/backup           emmc    /dev/block/bootdevice/by-name/backup     flags=backup=1;subpartitionof=/fsg
+
+/firmware         vfat    /dev/block/bootdevice/by-name/apnhlos
+/firmware-modem   vfat    /dev/block/bootdevice/by-name/modem
+
+/external_sd      auto    /dev/block/mmcblk1p1 /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg          auto    /dev/block/sda1 /dev/block/sda           flags=display="USB-OTG";storage;wipeingui;removable

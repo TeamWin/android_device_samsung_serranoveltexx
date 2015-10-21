@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="cm"
+           fetch="https://github.com/CyanogenMod"
+           review="review.cyanogenmod.org" />
+
+  <remove-project name="android_bionic" />
+
+  <project path="bionic" name="android_bionic" remote="cm" revision="cm-12.1" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="cm" revision="cm-12.1" />
+  <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="cm" revision="cm-12.1" />
+  <project path="hardware/samsung" name="android_hardware_samsung" remote="cm" revision="cm-12.1" />
+</manifest>
