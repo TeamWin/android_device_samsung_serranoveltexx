@@ -62,7 +62,7 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3 # TODO
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/serranoveltexx/rootdir/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 
 # TWRP
 TW_THEME := portrait_mdpi
