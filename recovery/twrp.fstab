@@ -17,8 +17,8 @@
 /fsg              emmc    /dev/block/bootdevice/by-name/fsg        flags=display="FSG";backup=1
 /backup           emmc    /dev/block/bootdevice/by-name/backup     flags=backup=1;subpartitionof=/fsg
 
-/firmware         vfat    /dev/block/bootdevice/by-name/apnhlos
-/firmware-modem   vfat    /dev/block/bootdevice/by-name/modem
+/firmware         vfat    /dev/block/bootdevice/by-name/apnhlos    flags=display="Firmware"
+/firmware-modem   vfat    /dev/block/bootdevice/by-name/modem      flags=display="Firmware (Modem)"
 
 /external_sd      auto    /dev/block/mmcblk1p1 /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
 /usb-otg          auto    /dev/block/sda1 /dev/block/sda           flags=display="USB-OTG";storage;wipeingui;removable
